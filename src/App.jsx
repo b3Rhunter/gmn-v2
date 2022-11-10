@@ -469,7 +469,7 @@ function App(props) {
       </Header>
 
 {goMint && (
-          <><div style={{ zIndex: 2, position: "absolute", left: 0, top: 60, padding: 16 }}>
+          <><div style={{ zIndex: 2, position: "fixed", left: 0, top: 60, padding: 16 }}>
           <Alert
             message="⚠️ Mint New Subscription"
             description={<div>
@@ -505,13 +505,13 @@ function App(props) {
                 <b>Mint</b>
               </Button>
             </div>}
-            type="error"
-            closable={true} />
+            type="success"
+            closable={false} />
         </div></>
 )}
 
 {subd && (
-        <><div style={{ zIndex: 2, position: "absolute", right: 0, top: 60, padding: 16 }}>
+        <><div style={{ zIndex: 2, position: "fixed", right: 0, top: 60, padding: 16 }}>
             <Alert
               message="⚠️ Your Subscription Has Expired!"
               description={<div>
@@ -549,7 +549,7 @@ function App(props) {
                 </Button>
               </div>}
               type="error"
-              closable={true} />
+              closable={false} />
           </div></>
   )
 }
