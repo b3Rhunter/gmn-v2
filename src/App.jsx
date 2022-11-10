@@ -624,50 +624,6 @@ function App(props) {
         </Row>
       </Modal>
 
-      <button
-        className="mint"
-        onClick={async () => {
-          /* look how you call setPurpose on your contract: */
-          /* notice how you pass a call back for tx updates too */
-          const contract = new ethers.Contract("0x12Ba88e93e69AD3748deeB694251a2FA6C8c7aE1", ABI, userSigner);
-
-          const cost = contract.cost();
-          const result = tx(contract.mint( { value: cost }), update => {
-            console.log("📡 Transaction Update:", update);
-            if (update && (update.status === "confirmed" || update.status === 1)) {
-              sendNotification("success", {
-                message: "Minted",
-                description: `You can now view any article of your choice.`,
-              });
-              console.log(" 🍾 Transaction " + update.hash + " finished!");
-              console.log(
-                " ⛽️ " +
-                  update.gasUsed +
-                  "/" +
-                  (update.gasLimit || update.gas) +
-                  " @ " +
-                  parseFloat(update.gasPrice) / 1000000000 +
-                  " gwei",
-              );
-            }
-          });
-          console.log("awaiting metamask/web3 confirm result...", result);
-          console.log(await result);
-        }}
-        style={{
-          position: "fixed",
-          bottom: "10px",
-          left: "10px",
-          display: "block",
-          width: "auto",
-          cursor: "pointer",
-          zIndex: "10",
-        }}
-        type="default"
-      >
-        Mint
-      </button>
-
       <a
         href="https://gmn-german-final.vercel.app/"
         target="_blank"
@@ -679,7 +635,7 @@ function App(props) {
           style={{
             position: "fixed",
             bottom: "10px",
-            left: "100px",
+            left: "24px",
             display: "block",
             width: "auto",
             cursor: "pointer",
