@@ -363,7 +363,7 @@ function App(props) {
 
     try {
       // validate token balance
-      const tokenAddress = "0x12Ba88e93e69AD3748deeB694251a2FA6C8c7aE1";
+      const tokenAddress = "0x12A0FA1A6029FF9b137b80Da429704A1251D5400";
       const tokenContract = new ethers.Contract(tokenAddress, ABI, userSigner);
       const balance = await tokenContract.balanceOf(address);
       const id = await tokenContract.tokenOfOwnerByIndex(address, "0");
@@ -476,7 +476,7 @@ function App(props) {
               
               <Button
                 onClick={async () => {
-                  const contract = new ethers.Contract("0x12Ba88e93e69AD3748deeB694251a2FA6C8c7aE1", ABI, userSigner);
+                  const contract = new ethers.Contract("0x12A0FA1A6029FF9b137b80Da429704A1251D5400", ABI, userSigner);
                   const cost = contract.cost();
                   const result = tx(contract.mint( { value: cost }), update => {
                     console.log("📡 Transaction Update:", update);
@@ -518,7 +518,7 @@ function App(props) {
                 Please burn your current token...
                 <Button
                   onClick={async () => {
-                    const contract = new ethers.Contract("0x12Ba88e93e69AD3748deeB694251a2FA6C8c7aE1", ABI, userSigner);
+                    const contract = new ethers.Contract("0x12A0FA1A6029FF9b137b80Da429704A1251D5400", ABI, userSigner);
                     const id = await contract.tokenOfOwnerByIndex(address, "0");
                     const parsedId = Number(ethers.utils.hexlify(id));
                     const result = tx(contract.burn(parsedId), update => {

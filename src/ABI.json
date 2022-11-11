@@ -1,17 +1,6 @@
 [
     {
-        "inputs": [
-            {
-                "internalType": "string",
-                "name": "_initBaseURI",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "_initCanceledURI",
-                "type": "string"
-            }
-        ],
+        "inputs": [],
         "stateMutability": "nonpayable",
         "type": "constructor"
     },
@@ -287,19 +276,6 @@
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "bool",
-                "name": "_state",
-                "type": "bool"
-            }
-        ],
-        "name": "pause",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
         "inputs": [],
         "name": "paused",
         "outputs": [
@@ -410,19 +386,6 @@
             }
         ],
         "name": "setCanceledURI",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_newCost",
-                "type": "uint256"
-            }
-        ],
-        "name": "setCost",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
