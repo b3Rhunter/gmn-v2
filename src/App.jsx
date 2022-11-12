@@ -409,14 +409,6 @@ function App(props) {
   return (
     <div className="App background">
 
-    <div className="adSpace2">
-  
-        <h6 className="adText2">Your</h6>
-        <h6 className="adText2">Ad Here</h6>
-        <button className="adBtn">Mint Ad Space</button>
-    
-    </div>
-
     <div className="twitterContainer">
             <a href="https://twitter.com/GMN_NFT" target="_blank" rel="noreferrer">
               <img 
